@@ -1,0 +1,8 @@
+.feedback__button {
+  display: inline-block;
+  height: 50px;
+  width: 110px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 20px;
+}
