@@ -15,10 +15,9 @@ export class App extends Component {
   }
 
 handleLeaveFeedback = event => {
-  const {currentValue} = event.target.value;
+  const {name} = event.target;
   this.setState(prevState => ({
-    [currentValue]: prevState[currentValue] + 1,
-  }))
+    [name]: prevState[name] + 1 }))
 }
 
 countTotalFeedback = () => {
@@ -41,8 +40,9 @@ render() {
       <FeedBackOptions 
       options={this.state} onLeaveFeedback={this.handleLeaveFeedback}
       />
+      </Section>
       { total === 0 ? (
-        <Notification message="There is no feedback"></Notification>) : (
+        <Notification message="There is no feedback!!"></Notification>) : (
           <Statistics 
           good={good} 
           neutral={neutral} 
@@ -51,8 +51,10 @@ render() {
           positivePercentage={positiveFeedback}
           />
         )}
-     </Section>
+
     </>
   );
+
 }
+
 }

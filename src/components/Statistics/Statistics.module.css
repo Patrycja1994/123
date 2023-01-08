@@ -1,0 +1,13 @@
+.statictis__header {
+    margin-left: 170px;
+}
+
+.statistics__list {
+    list-style-type: none;
+    font-weight: bold;
+}
+
+.statistics__list li {
+    margin-top: 10px;
+    font-size: 22px;
+}

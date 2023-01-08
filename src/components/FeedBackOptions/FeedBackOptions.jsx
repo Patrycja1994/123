@@ -1,22 +1,22 @@
 import PropTypes from 'prop-types';
 import style from './FeedBackOptions.module.css';
 
-export const FeedBackOptions = ({ options, onLeaveFeedBack}) => {
+export const FeedBackOptions = ({ options, onLeaveFeedback}) => {
     return  (
     <div>
-        {options.map(option => {
+        {Object.keys(options).map(option => {
             return (
                 <button
                 className= {style.feedback__button}
                 key={option}
                 type="button"
                 name={option}
-                onClick={onLeaveFeedBack}
+                onClick={onLeaveFeedback}
                 >
                     {option}
 
                 </button>
-            )
+            );
         })}
     </div>
     );
@@ -24,5 +24,5 @@ export const FeedBackOptions = ({ options, onLeaveFeedBack}) => {
 
     FeedBackOptions.propTypes = {
         options: PropTypes.object.isRequired,
-        onLeaveFeedBack: PropTypes.func.isRequired,
+        onLeaveFeeack: PropTypes.func.isRequired,
     };
